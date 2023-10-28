@@ -1,20 +1,20 @@
-import React from "react";
-import Book from "./Book";
-import BookForm from "./BookForm";
+import React from 'react';
+import Book from './Book';
+import BookForm from './BookForm';
 
 function BookList() {
   const books = [
     {
       id: 1,
-      title: "The Help",
-      author: "Kathryn Stockett",
-      category: "Historical Fiction",
+      title: 'The Help',
+      author: 'Kathryn Stockett',
+      category: 'Historical Fiction',
     },
     {
       id: 2,
-      title: "Bird Box",
-      author: "Josh Malerman",
-      category: "Horror",
+      title: 'Bird Box',
+      author: 'Josh Malerman',
+      category: 'Horror',
     },
   ];
   return (
