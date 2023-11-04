@@ -1,22 +1,10 @@
-import React from 'react';
-import Book from './Book';
-import BookForm from './BookForm';
+import React from "react";
+import useSelector from "react-redux";
+import Book from "./Book";
+import BookForm from "./BookForm";
 
 function BookList() {
-  const books = [
-    {
-      id: 1,
-      title: 'The Help',
-      author: 'Kathryn Stockett',
-      category: 'Historical Fiction',
-    },
-    {
-      id: 2,
-      title: 'Bird Box',
-      author: 'Josh Malerman',
-      category: 'Horror',
-    },
-  ];
+  const books = useSelector((state) => state.books.books);
   return (
     <div>
       <ul>
@@ -26,6 +14,7 @@ function BookList() {
             title={book.title}
             author={book.author}
             category={book.category}
+            item_id={book.item_id}
           />
         ))}
       </ul>
