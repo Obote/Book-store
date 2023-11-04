@@ -1,18 +1,14 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { PropTypes } from "prop-types";
-import { removeBook } from "../redux/books/booksSlice";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { removeBook } from '../redux/books/bookSlice';
 
 function Book({
-  // eslint-disable-next-line camelcase
-  title,
-  author,
-  category,
-  item_id,
+  title, author, category, itemId,
 }) {
   const dispatch = useDispatch();
   const handleDelete = () => {
-    dispatch(removeBook(item_id));
+    dispatch(removeBook(itemId));
   };
   return (
     <div>
@@ -32,7 +28,7 @@ Book.propTypes = {
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  item_id: PropTypes.string.isRequired,
+  itemId: PropTypes.string.isRequired,
 };
 
 export default Book;

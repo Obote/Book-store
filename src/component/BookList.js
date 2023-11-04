@@ -1,7 +1,7 @@
-import React from "react";
-import useSelector from "react-redux";
-import Book from "./Book";
-import BookForm from "./BookForm";
+import React from 'react';
+import useSelector from 'react-redux';
+import Book from './Book';
+import BookForm from './BookForm';
 
 function BookList() {
   const books = useSelector((state) => state.books.books);
@@ -14,7 +14,7 @@ function BookList() {
             title={book.title}
             author={book.author}
             category={book.category}
-            item_id={book.item_id}
+            itemId={book.itemId}
           />
         ))}
       </ul>
