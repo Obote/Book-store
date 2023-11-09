@@ -1,9 +1,11 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { PropTypes } from "prop-types";
-import { removeBook } from "../redux/books/bookSlice";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { PropTypes } from 'prop-types';
+import { removeBook } from '../redux/books/bookSlice';
 
-function Book({ title, author, category, itemId }) {
+function Book({
+  title, author, category, itemId,
+}) {
   const dispatch = useDispatch();
   const handleDelete = () => {
     dispatch(removeBook(itemId));
