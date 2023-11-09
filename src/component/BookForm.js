@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addBook } from "../redux/books/bookSlice";
 
 function BookForm() {
   const dispatch = useDispatch();
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title && author) {
@@ -13,12 +13,12 @@ function BookForm() {
         addBook({
           title,
           author,
-          category: 'fiction',
+          category: "fiction",
           itemId: Math.random().toString(),
-        }),
+        })
       );
-      setTitle('');
-      setAuthor('');
+      setTitle("");
+      setAuthor("");
     }
   };
   return (
