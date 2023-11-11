@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../Styles/NavBar.css';
 
 function NavBar() {
   return (
-    <div>
-      <h2>Samepage BookStore</h2>
-      <div>
+    <nav className="navigation-main">
+      <h2 className="main-heading">Book</h2>
+      <div className="nav-list-div">
         <ul className="nav-list">
           <li>
             <Link to="/">Home</Link>
@@ -15,7 +16,7 @@ function NavBar() {
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 }
 
