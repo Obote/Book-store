@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import NavBar from './component/NavBar';
-import BookList from './component/BookList';
+import MyBooks from './component/MyBooks';
 import Categories from './component/Categories';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NavBar />
       <Routes>
-        <Route path="/" element={<BookList />} />
+        <Route path="/" element={<MyBooks />} />
         <Route path="/Categories" element={<Categories />} />
       </Routes>
     </div>
