@@ -1,9 +1,10 @@
 import React from 'react';
+import '../Styles/Categories.css';
 
 function Categories() {
   return (
-    <div>
-      <h2>A comprehensive guide to the different types of books</h2>
+    <div className="category-cat">
+      <h1 className="heading-cat">Under Construction</h1>
     </div>
   );
 }
