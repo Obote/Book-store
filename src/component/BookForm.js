@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBooks } from '../redux/books/bookSlice';
+import '../Styles/Form.css';
 
 function BookForm() {
   const [input, setInput] = useState({
@@ -22,31 +23,31 @@ function BookForm() {
     setInput(input);
   };
   return (
-    <form>
-      <label htmlFor="label">
-        ADD NEW BOOK
-        <div>
-          <input
-            type="text"
-            onChange={getInputs}
-            name="title"
-            value={input.title}
-            placeholder="Book Title"
-          />
-          <br />
-          <input
-            type="text"
-            name="author"
-            onChange={getInputs}
-            value={input.author}
-            placeholder="Author"
-          />
-          <br />
-          <button type="submit" onClick={handleSubmit}>
-            ADD BOOK
-          </button>
-        </div>
-      </label>
+    <form className="book-form">
+      <h2 className="add-n-book">ADD NEW BOOK</h2>
+      <div className="input-wrapper">
+        <input
+          className="input-title"
+          type="text"
+          onChange={getInputs}
+          name="title"
+          value={input.title}
+          placeholder="Book Title"
+        />
+        <br />
+        <input
+          className="input-author"
+          type="text"
+          name="author"
+          onChange={getInputs}
+          value={input.author}
+          placeholder="Author"
+        />
+        <br />
+        <button className="add-button" type="submit" onClick={handleSubmit}>
+          ADD BOOK
+        </button>
+      </div>
     </form>
   );
 }
