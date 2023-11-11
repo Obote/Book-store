@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -41,7 +40,7 @@ export const addBooks = createAsyncThunk(
   async ({ id, title, author }) => {
     try {
       const dataStream = await axios.post(url, {
-        itemId: id,
+        item_id: id,
         title,
         author,
         category: 'Non fiction',
